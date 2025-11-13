@@ -93,3 +93,16 @@ function reDirectIllust()   {
 
 }
 
+// script.js
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const content = document.getElementById('content');
+
+  loader.style.opacity = '0';
+  setTimeout(() => {
+    loader.style.display = 'none';
+    document.body.style.overflow = 'auto'; // re-enable scrolling
+    content.style.display = 'block';
+  }, 500); // smooth fade-out
+});
+
